@@ -8,7 +8,7 @@ module RedmineTags
         base.class_eval do
           unloadable
 
-          acts_as_taggable_on :tags
+          acts_as_taggable
         end
       end
 

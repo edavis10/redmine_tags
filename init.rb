@@ -17,5 +17,11 @@ end
 require 'dispatcher'
 Dispatcher.to_prepare :redmine_tags do
   require_dependency 'issue'
-  Issue.send(:include, RedmineTags::Patches::IssuePatch)
+  unless Issue.included_modules.include?(RedmineTags::Patches::IssuePatch)
+    Issue.send(:include, RedmineTags::Patches::IssuePatch)
+  end
 end
+
+require 'redmine_tags/hooks/view_issues_form_details_bottom_hook'
+require 'redmine_tags/hooks/view_issues_show_description_bottom_hook'
+require 'redmine_tags/hooks/issue_before_save_hook'

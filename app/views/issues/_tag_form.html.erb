@@ -1,0 +1,7 @@
+<% fields_for :issue, issue, :builder => TabularFormBuilder do |f| %>
+  <div>
+    <p><%= f.text_field :tag_list, :size => '60' %></p>
+  </div>
+<% end %>
+
+<div style="clear:both;"> </div>

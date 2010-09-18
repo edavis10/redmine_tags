@@ -1,0 +1,16 @@
+<hr />
+
+<div class="tags">
+  <p><strong><%= l(:field_tags) %></strong></p>
+
+  <table id="tag_list" style="width:100%">
+    <% issue.tag_list.each do |tag| %>
+      <tr>
+        <td>
+          <%= h(tag) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+</div>
