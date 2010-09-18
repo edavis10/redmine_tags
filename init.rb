@@ -20,6 +20,11 @@ Dispatcher.to_prepare :redmine_tags do
   unless Issue.included_modules.include?(RedmineTags::Patches::IssuePatch)
     Issue.send(:include, RedmineTags::Patches::IssuePatch)
   end
+
+  unless Query.available_columns.collect(&:name).include?(:tag_list)
+    Query.add_available_column(QueryColumn.new(:tag_list))
+  end
+
 end
 
 require 'redmine_tags/hooks/view_issues_form_details_bottom_hook'
