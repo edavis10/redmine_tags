@@ -1,10 +1,10 @@
-= redmine_tags
+= Redmine Tags
 
 Allows marking up different models in Redmine with tags
 
 == Features
 
-TODO: fill in features
+* Tagging on issues
 
 == Getting the plugin
 
@@ -13,13 +13,13 @@ A copy of the plugin can be downloaded from {Little Stream Software}[https://pro
 
 == Installation and Setup
 
-1. Follow the Redmine plugin installation steps at: http://www.redmine.org/wiki/redmine/Plugins 
-2. Run the plugin migrations +rake db:migrate_plugins+
+1. Install the acts-as-taggable-on plugin (v2.0.6) (gem install acts-as-taggable-on)
+2. Follow the Redmine plugin installation steps at: http://www.redmine.org/wiki/redmine/Plugins 
 3. Restart your Redmine web servers (e.g. mongrel, thin, mod_rails)
 
 == Usage
 
-TODO: Add usage
+When editing an issue, there will be a text field to enter a list of comma separated tags.
 
 == License
 
