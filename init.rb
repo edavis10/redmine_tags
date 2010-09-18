@@ -1,4 +1,4 @@
-config.gem "acts-as-taggable-on", :version => '2.0.4'
+config.gem "acts-as-taggable-on", :version => '2.0.6'
 
 require 'redmine'
 
